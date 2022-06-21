@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Money Transfer Page of Bank Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="myfile/css/transfer.css">
+  
+</head>
+
+<body>
+<!-- Navigation Bar Start -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+  <a class="navbar-brand" href="home.html" style="font-size: 30px ;"><img src="https://www.thesparksfoundationsingapore.org/images/logo_small.png" alt="" width="35" height="36px" class="d-inline-block align-text-top" style="filter: invert(100%);">
+    Sparks Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="allCustomers.html">View Customers</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="transferMoney.html">Money Transfer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="transactionHistory.html">Transaction History</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.thesparksfoundationsingapore.org/">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.html">Contact us</a>
+      </li>
+    </ul>
+     
+    </div>
+  </div>
+</nav>
+<!-- Navigation Bar Finish -->
+  
+ 
+<!-- Transfer Form Start -->    
+<div class="container d-flex justify-content-xl-center justify-content-md-center">
+  <div class="col-md-5">
+      <div class="form-area">  
+          <form role="form" id="form-money-transfer">
+          <br style="clear:both">
+                      <h3 style="margin-bottom: 25px; text-align: center; ">Send the Money here</h3>
+                      
+                      <div class="form-group">
+                      <input type="number" minlength="10" maxlength="10" list="cs_lists" class="form-control" placeholder="Sender's Account Number" required name="cList_s_name" id="cList_s_name">
+                        <datalist id="cs_lists"></datalist>
+                      </div>
+
+                      <div class="form-group">
+                          <input type="email" class="form-control" id="s_email" name="email" placeholder="Sender's Email" required>
+                      </div>
+
+                      <div class="form-group">
+                      <input type="number" minlength="10" maxlength="10" list="cr_lists" class="form-control" placeholder="Receiver's Account Number" required name="cList_r_name" id="cList_r_name">
+                        <datalist id="cr_lists"></datalist>
+                      </div>
+                      
+                      <div class="form-group">
+                          <input type="email" class="form-control" id="r_email" name="email" placeholder="Receiver's Email" required>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="number" class="form-control" id="transfer_amount"  placeholder="Amount" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <button type="reset" id="clear" name="clear" class="btn btn-danger pull-left ">Reset</button>    
+                        <button type="button" id="submit" name="submit" class="btn btn-success pull-right ">Transfer</button>
+                      </div>
+                    
+                      <div class="form-group" id="msg">
+                        
+                      </div>
+          </form>
+      </div>
+  </div>
+  </div>
+<!-- Transfer Form finish -->
+
+    
+
+<!-- Js calls -->
+<script src="myfile/JS/custData.js"></script> 
+<script src="myfile/JS/transfer.js"></script> 
+
+</body>
+</html>
